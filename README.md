@@ -5,7 +5,7 @@
 ## Milestone Project 3 - Backend Development 
 
 
-* LogIt is a general purpose note storage website. Users are able to create, save and edit their notes. This is a responsive website to allow for use with any device   
+* LogIt is a web application that allows users to create, read, update, and delete notes with ease. This is a responsive website to allow for use with any device   
 
 * This is my Milestone Project 3 submission for Code Institute's Diploma in Web Application Development course. My website features one page and is built using technologies that I have learnt including HTML, CSS and JavaScript. My website uses non-relational databases, features full CRUD functionality and is built using technologies that I have learnt including HTML, CSS, JavaScript, Python and Flask.
 
@@ -51,8 +51,8 @@
 The audience of this website will be those who would like a secure location to create, store and access their notes:
 
 * As a user, I would like to create and categorise my notes. 
-* As a user, I would like my notes to be stored and reaccessed on demand.
-* As a user, I would like to delete my notes. 
+* As a user, I would like to access my notes on demand.
+* As a user, I would like to update my notes.
 * As a user, I would like my notes to be secure. 
 
 ## Website Structure and Features
@@ -63,31 +63,45 @@ The audience of this website will be those who would like a secure location to c
 
 ### Typograhpy
 
-All text is in Fuzzy Bubbles. This font is visually appealing and playful. Since the website has minimal text, it is the chosen font throughout.
+The text uses Fuzzy Bubbles whilst the title uses FreeHand. These fonts are visually appealing, playful and perpetuate a hand-written effect, which is in keeping with the theme of the website.
 
 ### Website Architecture
 
-The website consists of one simple page which intergrates all the interactive features. There are three sections where the user can provide input to achieve the desired output; the Time Selection, Play/Pause and Sound Selection sections. The content on the landing page has been styled using [Bootrap Jumbotron Components](https://getbootstrap.com/docs/4.0/components/jumbotron/) to fill as much space as possible. 
+The website consists of 6 pages. Each page has its own function for users to register, log in and access their notes. All pages were structured using the [Materialize Framework](https://materializecss.com/about.html). 
 
-- Time Selection:
+- Home Page:
 <p align="center"><img src="https://github.com/BMorrell92/Milestone_Project_2/blob/main/assets/images/Time%20Section.JPG"></p>
 
-- Play/Pause Section:
-<p align="center"><img src="https://github.com/BMorrell92/Milestone_Project_2/blob/main/assets/images/Play%20Section%201.JPG"></p>
-<p align="center"><img src="https://github.com/BMorrell92/Milestone_Project_2/blob/main/assets/images/Play%20Section%202.JPG"></p>
-<p align="center"><img src="https://github.com/BMorrell92/Milestone_Project_2/blob/main/assets/images/Play%20Section%203.JPG"></p> 
+- Log In Page:
+<p align="center"><img src=""></p>
 
-- Sound Selection:
-<p align="center"><img src="https://github.com/BMorrell92/Milestone_Project_2/blob/main/assets/images/Sound%20Section.JPG"></p>
+- Registration Page:
+<p align="center"><img src=""></p>
+
+- Profile Page:
+<p align="center"><img src=""></p>
+
+- New Notes Page:
+<p align="center"><img src=""></p>
+
+- Edit Notes Page:
+<p align="center"><img src=""></p>
+
 
 ### Current Features
 
 - **Responsive Design:**
 
   - By designing with a Mobile First philosophy the website can be viewed on any device, adjusting the layout according to the device.  
-  - Visulize grid systems have been used to acheive the responsive design.
+  - Materilize grid systems have been used to acheive the responsive design.
 
- - **Interactive Features:**
+- **Account Log In/Registration:**
+
+    - Time Selection: The user sets the timer by selecting a time.
+    - Play/Pause Button: The user can play or pause the timer which also controls the audio.
+    - Sound Selection: The user can select a sound which will also set a background GIF specific to the selected sound.
+
+- **Note Managment:**
 
     - Time Selection: The user sets the timer by selecting a time.
     - Play/Pause Button: The user can play or pause the timer which also controls the audio.
@@ -95,20 +109,22 @@ The website consists of one simple page which intergrates all the interactive fe
 
 ### Future Features
 
-- A time input function that allows the user to input a precise time.
-- Addition of high quality background videos, as opposed to GIF's.
-- A larger selection of sounds.
+- Automatic Date.
+
+## Database
 
 ## Technologies and Libaries Used
 1. [HTML5](https://www.w3.org/TR/html52/)
 2. [CSS3](https://www.w3.org/Style/CSS/Overview.en.html)
 3. [Javascript](https://www.javascript.com/)
-4. [Bootstrap framework for structuring](http://getbootstrap.com/)
+4. [Materialize framework for structuring](http://getbootstrap.com/)
 5. [Github for Repo creation and managment](https://github.com/)
 6. [Gitpod for file creation and code editing](https://gitpod.io/)
 7. [Figma was used to create Wireframes for the project](https://www.figma.com/)
 8. [Google Chrome's Dev Tools were used while building the project to test responsiveness, functionality and for debugging](https://developer.chrome.com/docs/devtools/)
 9. [The icons used were taken from Font Awesome](https://fontawesome.com/)
+10. [MongoDB to create and manage the database](https://mongodb.com)
+11. [Heroku to deploy the application](https://www.heroku.com/) 
 
 ## Testing 
 
@@ -158,29 +174,30 @@ By using Google Chrome's Dev Tool, compatability was checked on the following de
 
 ### Manual Testing 
 
-- Timer Function:
+- The following registration & login functionalities were tested and confirmed to be working:
 
-  - All four time inputs have been tested and proven to work.  
-  - Play/Pause button has been tested and proven to work.
-  - Timer duration animation has been observed to work in sync with all times.
+  - Successful registration.  
+  - Failed registration if username exists.
+  - Successful Login.
+  - Unsuccesful login if username does not exist.
+  - Unsuccesful login if password incorrect.
 
 
-- Audio and Background Wallpaper:
+- The following notes managment functionalities were tested and confirmed to be working:
 
-  - All four audio selections have been tested and proven to work.  
-  - Background wallpaper changes as intended when specific sound is selected.
-  - Audio sucessfully loops through for the whole duration.
-
+  - Notes are saved and retreived to profile page.  
+  - Notes can be created, updated and deleted.
+  
 ### Challenging User Stories 
 
-- *"As a user, I would like to have control over the amount of time I wish to hear ambient sounds."* - **The user has a selection of four different times**
-- *"As a user, I would like to be able to play and pause the ambient sounds as and when required."* - **The user can play or pause the sounds using the play/pause button**
-- *"As a user, I would like to choose from a selection of ambient sounds."* - **The user has a selection of four different ambient sounds**
-- *"As a user, I would like to see a background image/video of the selected ambient sound for added effect."* - **The background wallpaper changes with each selected sound to match the theme**
+- *"As a user, I would like to create and categorise my notes."* - **The user can add notes to their account and assign a selection of four categories to those notes**
+- *"As a user, I would like to access my notes on demand."* - **The user can access their notes at any time by logging into their account**
+- *"As a user, I would like to update my notes."* - **The user can edit or delete their notes**
+- *"As a user, I would like my notes to be secure."* - **The users notes are secured in their own account**
 
 ### User Feedback
 
-I asked a small group of friends and colleagues to test the website. I implemented some changes following feedback, but some changes were added to the "Future Features" section. The Feedback was as follows:
+I asked a small group of friends and colleagues to test the application. I implemented some changes following feedback, but some changes were added to the "Future Features" section. The Feedback was as follows:
 
 - *"It would be nice to have a box to input a specific time rather than having to select from defined options."* - **Future Feature**
 - *"The grainy background GIFs give the site a nice aesthetic, but it would look more professional with some high quality videos in the background"* - **Future Feature**
