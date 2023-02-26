@@ -1,6 +1,6 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-# LogIt (Meditation Website) 
+# LogIt (Online Notebook) 
 
 ## Milestone Project 3 - Backend Development 
 
@@ -59,7 +59,7 @@ The audience of this website will be those who would like a secure location to c
 
 ### Wireframes
 
-[View my wireframes in PDF format here.](https://github.com/BMorrell92/Milestone_Project_2/blob/main/assets/wireframes/MS2%20Wireframe.pdf) It should be noted, that the wireframes do not exactly match the final product, however, it does capture the main structure.
+[View my wireframes in PDF format here.](https://https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/wireframes/MS3Wireframes.pdf) It should be noted, that the wireframes do not exactly match the final product, however, it does capture the main structure.
 
 ### Typograhpy
 
@@ -220,15 +220,11 @@ I asked a small group of friends and colleagues to test the application. I imple
 
 ## Credits 
 
-I would like to credit Code Institute for providing easy-to-follow content and all the necessary source code from their tutorials.  
+I would like to credit Code Institute for providing easy-to-follow content and all the necessary source code from their tutorials. Much of the source code from the CodeInstitutes Task Manager mini project has been repurposed for this project.   
 
 ### Content 
 
 - The icons used were taken from [Font Awesome](https://fontawesome.com/)
-- The JS code was developed using this [Youtube tutorial](https://www.youtube.com/watch?v=oMBXdZzYqEk) and various other sources.
 
-### Media
 
-- The GIFs used for the background wallpaper were taken from open source website https://giphy.com/explore/open-source
-- The sound used for the website was sourced from a free sound effect website https://www.zapsplat.com/
 
