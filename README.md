@@ -59,7 +59,7 @@ The audience of this website will be those who would like a secure location to c
 
 ### Wireframes
 
-[View my wireframes in PDF format here.](https://https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/wireframes/MS3Wireframes.pdf) It should be noted, that the wireframes do not exactly match the final product, however, it does capture the main structure.
+[View my wireframes in PDF format here.](https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/wireframes/MS3Wireframes.pdf) It should be noted, that the wireframes do not exactly match the final product, however, it does capture the main structure.
 
 ### Typograhpy
 
