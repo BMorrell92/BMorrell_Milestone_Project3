@@ -23,16 +23,18 @@ mongo = PyMongo(app)
 def home():
     return render_template("home.html")
 
+
 @app.route("/get_notes")
 def get_notes():
     notes = list(mongo.db.notes.find())
-    return render_template("profile.html", notes=notes)
+    return render_template("notes.html", notes=notes)
+
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     notes = list(mongo.db.notes.find({"$text": {"$search": query}}))
-    return render_template("profile.html", notes=notes)
+    return render_template("notes.html", notes=notes)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -122,7 +124,7 @@ def add_note():
             "created_by": session["user"]
         }
         mongo.db.notes.insert_one(note)
-        flash("Task Successfully Added")
+        flash("Note Successfully Added")
         return redirect(url_for("get_notes"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -135,25 +137,25 @@ def edit_note(note_id):
         high_importance = "on" if request.form.get("high_importance") else "off"
         submit = {
             "category_name": request.form.get("category_name"),
-            "task_name": request.form.get("note_name"),
+            "note_name": request.form.get("note_name"),
             "note_description": request.form.get("note_description"),
             "high_importance": high_importance,
             "note_date": request.form.get("note_date"),
             "created_by": session["user"]
         }
-        mongo.db.notes.update_one({"_id": ObjectId(note_id)}, submit)
+        mongo.db.notes._update_retryable({"_id": ObjectId(note_id)}, submit)
         flash("Task Successfully Updated")
 
-    task = mongo.db.notes.find_one({"_id": ObjectId(note_id)})
+    note = mongo.db.notes.find_one({"_id": ObjectId(note_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_note.html", note=note, categories=categories)
 
 
-@app.route("/delete_note/<task_id>")
+@app.route("/delete_note/<note_id>")
 def delete_note(note_id):
-    mongo.db.notes.delete_one({"_id": ObjectId(notes_id)})
+    mongo.db.notes.delete_one({"_id": ObjectId(note_id)})
     flash("Note Successfully Deleted")
-    return redirect(url_for("profile"))
+    return redirect(url_for("get_notes"))
 
 
 @app.route("/get_categories")
