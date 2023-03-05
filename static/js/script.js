@@ -3,6 +3,7 @@
 */
 
 $(document).ready(function () {
+    $('.modal').modal();
     $(".sidenav").sidenav({edge: "right"});
     $(".collapsible").collapsible();
     $(".tooltipped").tooltip();
