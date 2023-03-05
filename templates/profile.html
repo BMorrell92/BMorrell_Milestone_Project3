@@ -1,56 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-
-    <h3 class="light-blue-text text-darken-4 center-align">{{ username }}'s Notes</h3>
-
-    <div class="row card-panel grey lighten-5">
-        <form action="{{ url_for('search') }}" method="post" class="col s12">
-            <div class="row valign-wrapper center-align">
-                <div class="input-field col s12 m8">
-                    <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
-                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                    <label for="query">Search Notes</label>
-                </div>
-                <div class="col s12 m4">
-                    <a href="{{ url_for('profile') }}" class="red btn text-shadow">Reset</a>
-                    <button type="submit" class="light-blue darken-1 btn text-shadow">
-                        <i class="fas fa-search left"></i> Search
-                    </button>
-                </div>
+<!-- Profile Card -->
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <div class="card-panel">
+                <h2 class="center-align">
+                    <a href="{{ url_for('get_notes') }}" class="center-align light-blue-text text-darken-4">
+                       Click to enter {{ username }}'s profile
+                    </a>
+                </h2>
             </div>
-        </form>
+        </div>
     </div>
-
-    {% if notes|length > 0 %}
-    <ul class="collapsible">
-        {% for note in notes %}
-        <li>
-            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
-                <div class="col s3">
-                    <i class="fas fa-caret-down"></i>
-                    {% if session.user|lower == note.created_by|lower %}
-                        <a href="{{ url_for('delete_note', note_id=note._id) }}" class="btn-small green accent-4">Done</a>
-                        <a href="{{ url_for('edit_note', note_id=note._id) }}" class="btn-small light-blue lighten-1">Edit</a>
-                    {% endif %}
-                </div>
-                <div class="col s9">
-                    <strong>{{ note.note_name }}</strong> : {{ note.note_date }}
-                    {% if note.high_importance == "on" %}
-                        <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped"
-                            data-position="right" data-tooltip="URGENT!"></i>
-                    {% endif %}
-                </div>
-            </div>
-            <div class="collapsible-body">
-                <strong>{{ note.category_name }}</strong>
-                <p>{{ note.note_description }}</p>
-                <p><em>by: {{ note.created_by }}</em></p>
-            </div>
-        </li>
-        {% endfor %}
-    </ul>
-    {% else %}
-        <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
-    {% endif %}
 
 {% endblock %}

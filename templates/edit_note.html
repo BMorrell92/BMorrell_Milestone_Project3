@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="light-blue-text text-darken-4 center-align">Edit Note</h3>
+    <h3 class="black-text text-darken-4 center-align">Edit Note</h3>
 
     <div class="row card-panel grey lighten-5">
         <form class="col s12" method="POST" action="{{ url_for('edit_note', note_id=note._id) }}">
@@ -12,26 +12,26 @@
 					<select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled>Choose Category</option>
                         {% for category in categories %}
-                            {% if category.category_name == note.category_name %}
+                            {% if note.category_name == note.category_name %}
                                 <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
                             {% else %}
                                 <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                             {% endif %}
                         {% endfor %}
                     </select>
-					<label for="category_name">Note Category</label>
+					<label for="category_name">Task Category</label>
 				</div>
 			</div>
-            <!-- note name -->
+            <!-- task name -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
                     <input id="note_name" name="note_name" minlength="5" maxlength="50"
                         value="{{ note.note_name }}" type="text" class="validate" required>
-                    <label for="note_name">Note Name</label>
+                    <label for="note_name">Task Name</label>
                 </div>
             </div>
-            <!-- note description -->
+            <!-- task description -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
@@ -46,9 +46,9 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
-                    <input id="due_date" name="due_date" type="text"
-                        value="{{ note.due_date }}" class="datepicker validate" required>
-                    <label for="due_date">Due Date</label>
+                    <input id="note_date" name="note_date" type="text"
+                        value="{{ note.note_date }}" class="datepicker validate" required>
+                    <label for="note_date">Due Date</label>
                 </div>
             </div>
             <!-- is urgent toggle -->
@@ -56,14 +56,14 @@
 				<div class="input-field col s12">
 					<div class="switch">
                         <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
-						<label for="is_urgent">
-                            {% if note.is_urgent == "on" %}
-                                <input type="checkbox" id="is_urgent" name="is_urgent" checked>
+						<label for="high_importance">
+                            {% if note.high_importance == "on" %}
+                                <input type="checkbox" id="high_importance" name="high_importance" checked>
                             {% else %}
-                                <input type="checkbox" id="is_urgent" name="is_urgent">
+                                <input type="checkbox" id="high_importance" name="high_importance">
                             {% endif %}
                             <span class="lever"></span>
-                            Is Urgent
+                            High Importance
                         </label>
 					</div>
 				</div>
@@ -72,11 +72,11 @@
             <div class="row">
                 <div class="col s12 center-align">
                     <!-- cancel button -->
-                    <a href="{{ url_for('profile') }}" class="btn-large red text-shadow">
+                    <a href="{{ url_for('get_notes') }}" class="btn-large red text-shadow">
                         Cancel <i class="fas fa-times-circle right"></i>
                     </a>
                     <button type="submit" class="btn-large light-blue darken-1 text-shadow">
-                        Edit Note <i class="fas fa-edit right"></i>
+                        Submit Ammendment <i class="fas fa-edit right"></i>
                     </button>
                 </div>
             </div>
