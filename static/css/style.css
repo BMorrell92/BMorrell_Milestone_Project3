@@ -26,8 +26,8 @@ nav .brand-logo {
     color: rgb(255, 240, 240);
   }
   
-  h3, h4, p, a {
-    color: azure;
+  h3, h4, p, a, button {
+    color: black;
     margin-bottom: 20px;
     font-family: "Fuzzy Bubbles";
   }
