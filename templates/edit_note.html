@@ -19,19 +19,19 @@
                             {% endif %}
                         {% endfor %}
                     </select>
-					<label for="category_name">Task Category</label>
+					<label for="category_name">Note Category</label>
 				</div>
 			</div>
-            <!-- task name -->
+            <!-- note name -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
                     <input id="note_name" name="note_name" minlength="5" maxlength="50"
                         value="{{ note.note_name }}" type="text" class="validate" required>
-                    <label for="note_name">Task Name</label>
+                    <label for="note_name">Note Name</label>
                 </div>
             </div>
-            <!-- task description -->
+            <!-- note description -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
@@ -51,7 +51,7 @@
                     <label for="note_date">Due Date</label>
                 </div>
             </div>
-            <!-- is urgent toggle -->
+            <!-- high importance toggle -->
 			<div class="row">
 				<div class="input-field col s12">
 					<div class="switch">
