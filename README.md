@@ -65,7 +65,7 @@ The audience of this website will be those who would like a secure location to c
 
 The text uses Fuzzy Bubbles whilst the title uses FreeHand. These fonts are visually appealing, playful and perpetuate a hand-written effect, which is in keeping with the theme of the website.
 
-### Website Architecture
+### Website Architecture & Features
 
 The website consists of 6 pages. Each page has its own function for users to register, log in and access their notes. All pages were structured using the [Materialize Framework](https://materializecss.com/about.html). 
 
@@ -87,26 +87,6 @@ When first visiting the website, users are greeted with a homepage which introdu
 
 - Edit Notes Page:
 <p align="center"><img src=""></p>
-
-
-### Current Features
-
-- **Responsive Design:**
-
-  - By designing with a Mobile First philosophy the website can be viewed on any device, adjusting the layout according to the device.  
-  - Materilize grid systems have been used to acheive the responsive design.
-
-- **Account Log In/Registration:**
-
-    - Time Selection: The user sets the timer by selecting a time.
-    - Play/Pause Button: The user can play or pause the timer which also controls the audio.
-    - Sound Selection: The user can select a sound which will also set a background GIF specific to the selected sound.
-
-- **Note Managment:**
-
-    - Time Selection: The user sets the timer by selecting a time.
-    - Play/Pause Button: The user can play or pause the timer which also controls the audio.
-    - Sound Selection: The user can select a sound which will also set a background GIF specific to the selected sound.
 
 ### Future Features
 
