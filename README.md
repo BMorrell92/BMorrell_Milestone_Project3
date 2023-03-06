@@ -9,8 +9,6 @@
 * This is my Milestone Project 3 submission for Code Institute's Diploma in Web Application Development course. My website features one page and is built using technologies that I have learnt including HTML, CSS and JavaScript. My website uses non-relational databases, features full CRUD functionality and is built using technologies that I have learnt including HTML, CSS, JavaScript, Python and Flask.
 
 
-<h2><img src=></h2>
-
 ## Live Project 
 
 [View the live project here.](https://notes-ben-ms3.herokuapp.com/)
@@ -65,34 +63,33 @@ The audience of this website will be those who would like a secure location to c
 
 The text uses Fuzzy Bubbles whilst the title uses FreeHand. These fonts are visually appealing, playful and perpetuate a hand-written effect, which is in keeping with the theme of the website.
 
-### Website Architecture & Features
+### Website Structure & Features
 
-The website consists of 6 pages. Each page has its own function for users to register, log in and access their notes. All pages were structured using the [Materialize Framework](https://materializecss.com/about.html). 
+The website consists of 6 pages. Each page has its own function for users to register, log in and access their notes. Page structuring and functionality was structured using the [Materialize Framework](https://materializecss.com/about.html). 
 
 - Home Page:
 When first visiting the website, users are greeted with a homepage which introduces the purpose of LogIt:
-<p align="center"><img src="https://github.com/BMorrell92/Milestone_Project_2/blob/main/assets/images/Time%20Section.JPG"></p>
+<p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/home.JPG"></p>
 
 - Log In Page:
-<p align="center"><img src=""></p>
+From the Log In page returning users can enter their credentials into the form to access their profile:
+<p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/log%20in.JPG"></p>
 
 - Registration Page:
-<p align="center"><img src=""></p>
+From the Registration page new users can enter their desired credentials into the form to create a profile:
+<p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/register.JPG"></p>
 
 - Profile Page:
-<p align="center"><img src=""></p>
+From the the Profile/Notes page users can access, search and delete their notes:
+<p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/profile.JPG"></p>
 
 - New Notes Page:
-<p align="center"><img src=""></p>
+From the New Notes page users can add new notes to thier profile by filling in the new notes form:
+<p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/new.JPG"></p>
 
 - Edit Notes Page:
-<p align="center"><img src=""></p>
-
-### Future Features
-
-- Automatic Date.
-
-## Database
+From the Edit Notes page users can add new notes to thier profile by filling in the new notes form.
+<p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/edit.JPG"></p>
 
 ## Technologies and Libaries Used
 1. [HTML5](https://www.w3.org/TR/html52/)
@@ -112,19 +109,22 @@ When first visiting the website, users are greeted with a homepage which introdu
 ### Validator Testing 
 
 - **HTML:**
-  - index.html: 0 errors were returned when passing through the official W3C validator
-  <p align="center"><img src="https://github.com/BMorrell92/Milestone_Project_2/blob/main/assets/images/HTML%20Validator.jpg"></p>
+  - No errors were returned when passing through the official W3C validator:
+  <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/HTML%20Validator.JPG"></p>
 
   
 - **CSS:**
-  - No errors were found when passing through the official W3C validator 
- <p align="center"><img src="https://github.com/BMorrell92/Milestone_Project_2/blob/main/assets/images/CSS%20Validator.JPG"></p>
+  - No errors were found when passing through the official W3C validator: 
+ <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/CSS%20Validator.JPG"></p>
 
 
 - **Javascript:**
-    - No errors were found when passing through the JSHint Validator or Chrome Developer Tool
- <p align="center"><img src="https://github.com/BMorrell92/Milestone_Project_2/blob/main/assets/images/JS%20Validator.JPG"></p>
- <p align="center"><img src="https://github.com/BMorrell92/Milestone_Project_2/blob/main/assets/images/JS%20Chrome.jpg"></p>
+    - No errors were found when passing through the JSHint Validator:
+ <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/JS%20Validator.JPG"></p>
+ 
+ - **Python:**
+    - No errors were found when passing through the Python Tester
+ <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/Python%20Validator.JPG"></p>
 
 
 ### Browser Compatability
@@ -155,7 +155,7 @@ By using Google Chrome's Dev Tool, compatability was checked on the following de
 
 ### Manual Testing 
 
-- The following registration & login functionalities were tested and confirmed to be working:
+- User authentication was tested and confirmed to be working. The following elements were tested:
 
   - Successful registration.  
   - Failed registration if username exists.
@@ -178,30 +178,27 @@ By using Google Chrome's Dev Tool, compatability was checked on the following de
 
 ### User Feedback
 
-I asked a small group of friends and colleagues to test the application. I implemented some changes following feedback, but some changes were added to the "Future Features" section. The Feedback was as follows:
+I asked a small group of friends and colleagues to test the application. Any criticisms will be considiered for future developments. The Feedback was as follows:
 
-- *"It would be nice to have a box to input a specific time rather than having to select from defined options."* - **Future Feature**
-- *"The grainy background GIFs give the site a nice aesthetic, but it would look more professional with some high quality videos in the background"* - **Future Feature**
-- *"Is it possible to incorporate a timer bar?"* - **Implemented into project**
-- *"A wider selection of sounds would be cool"* - **Future Feature**
+- *"Easy to use and good for simple notes. However, it's a bit too simple if you want to start getting a bit more complex with your notes"*
+- *"Slightly 90's looking, but it does a good job, and I might even start using it myself!"* 
+- *"Good work! Only thing i'd suggest is a custom field for the categories."* 
 
 
 ## Bugs
 
 ### Resolved
 - **HTML Validation:**
-    - When I first validated my game page HTML, the validator came back with an error; “Attribute ‘type' not allowed on element label at this point”. To solve the issue I ommitted the type attribute from all label elements as they were not needed.
+    - When I first passed the website through the html validator it was returning the following errors:
+    <p align="center"><img src="https://github.com/BMorrell92/BMorrell_Milestone_Project3/blob/main/assets/images/HTML%20Error.JPG"></p>
+    To fix this I deleted the divs that were nesting the li elements.
 
-- **Background Wallpaper not Resetting from "Dawn" Sound:**
-    - When I was first manually testing the website for all it's interactive features, I noticed that the background wallpaper was sticking on the "Dawn" audio, and the website need to be refreshed to restore functionality. I solved this bug by adjusting the reset and set audio & background functions in the JS code. 
-
-### Unresolved
-- **Rendering Speed:**
-  - It has been noticed that rendering issues occur with poor internet speeds, which can occasionally affect the user experience. On this occassion, all media content is being hosted within the source code, however, any future improvments will have to utilise CDN's to improve the rendering time of the website.
+- **App Methods:**
+  - Whilst following the Code Institute Task Manager mini project I noticed some of the methods they were using were not working in my case. Specifically, the delete funtion used the "remove" method to delete an item from the database on the tutorial, but the "delete_one" method worked for me. Furthermore, the edit funtion used the "update" method to update items on the database on the tutorial, but the "update_retryable" worked for me. 
 
 ## Credits 
 
-I would like to credit Code Institute for providing easy-to-follow content and all the necessary source code from their tutorials. Much of the source code from the CodeInstitutes Task Manager mini project has been repurposed for this project.   
+I would like to credit Code Institute for providing easy-to-follow content and all the necessary source code from their tutorials. Much of the source code from the Code Institutes Task Manager mini project has been repurposed for the benefit of this deliverable.   
 
 ### Content 
 
