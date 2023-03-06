@@ -13,11 +13,11 @@
 
 ## Live Project 
 
-[View the live project here.](https://bmorrell92.github.io/)
+[View the live project here.](https://notes-ben-ms3.herokuapp.com/)
 
 ## Repository
 
-[Find the project repository here](https://github.com/BMorrell92/)
+[Find the project repository here](https://github.com/BMorrell92/BMorrell_Milestone_Project3)
 
 # Table of Contents  
 
@@ -47,11 +47,12 @@
 
 ## User Stories
 
-The audience of this website will be those who would like a secure location to create, store and access their notes:
+The audience of this website will be those who would like a secure location to create, read, update and delete their notes:
 
 * As a user, I would like to create and categorise my notes. 
 * As a user, I would like to access my notes on demand.
 * As a user, I would like to update my notes.
+* As a user, I would like to delete my notes.
 * As a user, I would like my notes to be secure. 
 
 ## Website Structure and Features
@@ -69,6 +70,7 @@ The text uses Fuzzy Bubbles whilst the title uses FreeHand. These fonts are visu
 The website consists of 6 pages. Each page has its own function for users to register, log in and access their notes. All pages were structured using the [Materialize Framework](https://materializecss.com/about.html). 
 
 - Home Page:
+When first visiting the website, users are greeted with a homepage which introduces the purpose of LogIt:
 <p align="center"><img src="https://github.com/BMorrell92/Milestone_Project_2/blob/main/assets/images/Time%20Section.JPG"></p>
 
 - Log In Page:
