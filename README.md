@@ -37,7 +37,6 @@
   + [User Feedback](#User-Feedback)
 - [Bugs](#bugs)
   + [Resolved](#resolved)
-  + [Unresolved](#Unresolved)
 - [Credits](#credits)
   + [Content](#content)
   + [Media](#media)
